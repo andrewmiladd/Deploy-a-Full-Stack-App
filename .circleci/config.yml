@@ -7,8 +7,8 @@ jobs:
   docker:
    - image: "cimg/base"
   steps:
-   - node\install
-   - node\install-yarn
+   - node/install:
+      install-yarn : true
    - checkout
    - aws-cli/setup
    - eb/setup

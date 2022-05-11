@@ -30,6 +30,6 @@ jobs:
        name : front-end build
        command :  yarn front-end-build
    - run :
-       name : fron-end deploy
+       name : front-end deploy
        command :  yarn front-end-deploy
    

@@ -22,5 +22,5 @@ jobs:
        command : cd ./udagram/udagram-frontend && yarn
    - run : 
        name : back-end install
-       command: cd .\udagram\udagram-api && npm install
+       command: cd ./udagram/udagram-api && yarn
    

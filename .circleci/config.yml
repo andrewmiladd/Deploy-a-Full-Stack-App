@@ -8,15 +8,15 @@ jobs:
   docker:
    - image: "cimg/base"
   steps:
-   - node/install:
-      install-yarn : true
+   - node/install
+   - node/install-yarn
    - checkout
    - aws-cli/setup
    - eb/setup
    - run : 
        name : Front-end install 
-       command : cd .\udagram\udagram-frontend && yarn 
+       command : cd .\udagram\udagram-frontend && npm install
    - run : 
        name : back-end install
-       command: cd .\udagram\udagram-api && yarn 
+       command: cd .\udagram\udagram-api && npm install
    

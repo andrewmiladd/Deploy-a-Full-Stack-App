@@ -1,7 +1,10 @@
 {
   "scripts": {
   "front-end-install":"cd ./udagram/udagram-frontend && yarn"
-  
+  "back-end-install":"cd ./udagram/udagram-api && yarn",
+  "back-end-build":"cd ./udagram/udagram-api && yarn build",
+  "front-end-build":"cd ./udagram/udagram-frontend && yarn build",
+  "front-end-deploy":"cd ./udagram/udagram-frontend &&  aws s3 cp --recursive --acl public-read ./www s3://udagram-andrewww/"
   
 },
   "devDependencies": {

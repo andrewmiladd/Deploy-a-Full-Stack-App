@@ -12,7 +12,8 @@ jobs:
    AWS_DEFAULT_REGION: us-east-1
    AWS_SECRET_ACCESS_KEY: 7LBBtUgfkbSNA8JfjDpnORSnoNCR/aBhaWxEZfM5
   steps:
-   - node/install
+   - node/install:
+      node-version: "16.13.2"
    - node/install-yarn
    - checkout
    - aws-cli/setup
@@ -28,7 +29,7 @@ jobs:
        command : yarn back-end-build
    - run :
        name : front-end build
-       command : cd ./udagram/udagram-frontend && yarn build
+       command : yarn front-end-build
    - run :
        name : front-end deploy
        command : yarn front-end-deploy

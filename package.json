@@ -1,4 +1,9 @@
 {
+  "scripts": {
+  "front-end-install":"cd ./udagram/udagram-frontend && yarn"
+  
+  
+},
   "devDependencies": {
     "typescript": "3.4.5"
   }

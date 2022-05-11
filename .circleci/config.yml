@@ -19,17 +19,17 @@ jobs:
    - eb/setup
    - run : 
        name : Front-end install 
-       command : npm run front-end-install
+       command : yarn front-end-install
    - run : 
        name : back-end install
-       command:  npm run back-end-install
+       command:  yarn back-end-install
    - run :
        name : back-end build
-       command : npm run back-end-build
+       command : yarn back-end-build
    - run :
        name : front-end build
-       command :  npm run front-end-build
+       command :  yarn front-end-build
    - run :
        name : fron-end deploy
-       command :  npm run front-end-deploy
+       command :  yarn front-end-deploy
    

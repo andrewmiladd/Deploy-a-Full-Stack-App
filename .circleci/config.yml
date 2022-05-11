@@ -22,8 +22,14 @@ jobs:
        command : yarn front-end-install
    - run : 
        name : back-end install
-       command: cd ./udagram/udagram-api && yarn
+       command: yarn back-end-install
    - run :
        name : back-end build
-       command : cd ./udagram/udagram-api && yarn build
+       command : yarn back-end-build
+   - run :
+       name : front-end build
+       command : yarn front-end-build
+   - run :
+       name : fron-end deploy
+       command : yarn front-end-deploy
    

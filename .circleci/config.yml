@@ -19,7 +19,7 @@ jobs:
    - eb/setup
    - run : 
        name : Front-end install 
-       command : yarn front-end-install
+       command : cd ./udagram/udagram-frontend && yarn
    - run : 
        name : back-end install
        command: yarn back-end-install

@@ -12,7 +12,7 @@ jobs:
    - node/install-yarn
    - checkout
    - aws-cli/setup
-   
+   - eb/setup
    - run : 
        name : Front-end install 
        command : cd .\udagram\udagram-frontend && npm install

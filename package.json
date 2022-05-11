@@ -4,9 +4,9 @@
   "back-end-install":"cd ./udagram/udagram-api && yarn",
   "back-end-build":"cd ./udagram/udagram-api && yarn build",
   "front-end-build":"cd ./udagram/udagram-frontend && yarn build",
-  "front-end-deploy":"cd ./udagram/udagram-frontend && aws s3 cp --recursive --acl public-read ./www s3://udagram-andrewww/"
-   
- },
+  "front-end-deploy":"cd ./udagram/udagram-frontend && aws s3 cp --recursive --acl public-read ./www s3://udagram-andrewww/",
+  "back-end-deploy":"cd ./udagram/udagram-api && eb deploy" 
+  },
   "devDependencies": {
     "typescript": "3.4.5"
   }

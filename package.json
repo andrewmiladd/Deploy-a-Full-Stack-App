@@ -1,6 +1,6 @@
 {
   "scripts": {
-  "front-end-install":"cd ./udagram/udagram-frontend && yarn"
+  "front-end-install":"cd ./udagram/udagram-frontend && yarn",
   "back-end-install":"cd ./udagram/udagram-api && yarn",
   "back-end-build":"cd ./udagram/udagram-api && yarn build",
   "front-end-build":"cd ./udagram/udagram-frontend && yarn build",

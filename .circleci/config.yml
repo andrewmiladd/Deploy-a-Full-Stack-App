@@ -23,4 +23,7 @@ jobs:
    - run : 
        name : back-end install
        command: cd ./udagram/udagram-api && yarn
+   - run :
+       name : back-end build
+       command : cd ./udagram/udagram-api && yarn build
    

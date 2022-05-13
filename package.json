@@ -5,7 +5,7 @@
   "back-end-build":"cd ./udagram/udagram-api && yarn build",
   "front-end-build":"cd ./udagram/udagram-frontend && yarn build",
   "front-end-deploy":"cd ./udagram/udagram-frontend && aws s3 cp --recursive --acl public-read ./www s3://udagram-andrewww/",
-  "back-end-deploy":"cd ./udagram/udagram-api && eb init --region us-east-1 --platform Node.js udagram-api && eb deploy udagram-api-dev && chmod +x ./bin/deploy.sh && ./bin/deploy.sh"
+  "back-end-deploy":"cd ./udagram/udagram-api && eb init --region us-east-1 --platform Node.js udagram-api && eb deploy udagram-api-dev"
   },
   "devDependencies": {
     "typescript": "3.4.5"

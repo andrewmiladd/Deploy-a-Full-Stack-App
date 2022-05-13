@@ -8,9 +8,9 @@ jobs:
   docker:
    - image: "cimg/base:stable"
   environment:
-   AWS_ACCESS_KEY_ID: AKIAU2EHTMQTNE7C4CGC
+   AWS_ACCESS_KEY_ID: AKIAU2EHTMQTLKQED5NK
    AWS_DEFAULT_REGION: us-east-1
-   AWS_SECRET_ACCESS_KEY: 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
+   AWS_SECRET_ACCESS_KEY: bPTgpz5+PukYCogPG93VWP+mqNmuYJn40oW8aQ2g
   steps:
    - node/install:
       node-version: "16.13.2"

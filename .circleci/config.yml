@@ -7,8 +7,7 @@ jobs:
  build: 
   docker:
    - image: "cimg/base:stable"
-   
-   environment:
+   - environment:
    AWS_ACCESS_KEY_ID: AKIAU2EHTMQTLKQED5NK
    AWS_DEFAULT_REGION: us-east-1
    AWS_SECRET_ACCESS_KEY: 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

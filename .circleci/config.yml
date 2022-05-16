@@ -7,6 +7,7 @@ jobs:
  build: 
   docker:
    - image: "cimg/base:stable"
+   - context : udagram  # for my environment variables
   environment:
    AWS_ACCESS_KEY_ID: AKIAU2EHTMQTLKQED5NK
    AWS_DEFAULT_REGION: us-east-1
@@ -18,22 +19,22 @@ jobs:
    - checkout
    - aws-cli/setup
    - eb/setup
-   - run : 
+   - run : # Installing packages of front-end
        name : Front-end install 
        command : yarn front-end-install
-   - run : 
+   - run :  # Installing packages of backend
        name : back-end install
        command:  yarn back-end-install
-   - run :
+   - run :  # building my backend
        name : back-end build
        command : yarn back-end-build
-   - run :
+   - run : # building my front-end
        name : front-end build
        command : yarn front-end-build
-   - run :
+   - run : # deploying my front-end
        name : front-end deploy
        command : yarn front-end-deploy
-   - run :
+   - run :  # deploying my backend
        name : back-end deploy
        command : yarn back-end-deploy
  

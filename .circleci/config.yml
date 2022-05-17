@@ -20,3 +20,5 @@ jobs:
       - eb/setup
      
       - run:
+          name: Front-end install
+          command: yarn front-end-install

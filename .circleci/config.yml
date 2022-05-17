@@ -36,7 +36,5 @@ jobs:
       - run : 
           name: front-end deploy
           command: yarn front-end-deploy
-      - run : 
-          name: Backend deploy
-          command: yarn back-end-deploy     
+         
           

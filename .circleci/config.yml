@@ -1,39 +1,39 @@
-version : 2.1
+version: 2.1
 orbs:
  node: circleci/node@4.1.0
  aws-cli: circleci/aws-cli@2.0.3
- eb: circleci/aws-elastic-beanstalk@2.0.1
+ eb: circleci/aws-elastic-beanstalk@1.0.0
 jobs:
- build: 
-  docker:
-   - image: "cimg/base:stable"
+  build:
+    docker:
+      - image: "cimg/base:stable"
  environment:
    AWS_ACCESS_KEY_ID: AKIARR5FNBORNF6MOL64
    AWS_DEFAULT_REGION: us-east-1
    AWS_SECRET_ACCESS_KEY: 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
-  steps:
-   - node/install:
-      node-version: "16.13.2"
-   - node/install-yarn
-   - checkout
-   - aws-cli/setup
-   - eb/setup
-   - run : # Installing packages of front-end
+   steps:
+    - node/install:
+       node-version: "16.13.2"
+    - node/install-yarn
+    - checkout
+    - aws-cli/setup
+    - eb/setup
+    - run : # Installing packages of front-end
        name : Front-end install 
        command : yarn front-end-install
-   - run :  # Installing packages of backend
+    - run :  # Installing packages of backend
        name : back-end install
        command:  yarn back-end-install
-   - run :  # building my backend
+    - run :  # building my backend
        name : back-end build
        command : yarn back-end-build
-   - run : # building my front-end
+    - run : # building my front-end
        name : front-end build
        command : yarn front-end-build
-   - run : # deploying my front-end
+    - run : # deploying my front-end
        name : front-end deploy
        command : yarn front-end-deploy
-   - run :  # deploying my backend
+    - run :  # deploying my backend
        name : back-end deploy
        command : yarn back-end-deploy
  

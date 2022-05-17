@@ -22,3 +22,19 @@ jobs:
       - run:
           name: Front-end install
           command: yarn front-end-install
+      - run :
+          name : backend install
+          command: yarn back-end-install
+      - run :     
+          name : backend build
+          command: yarn back-end-build
+      - run :
+          name: front-end build
+          command: yarn front-end-build
+      - run : 
+          name: front-end deploy
+          command: yarn front-end-deploy
+      - run : 
+          name: Backend deploy
+          command: yarn back-end-deploy     
+          
